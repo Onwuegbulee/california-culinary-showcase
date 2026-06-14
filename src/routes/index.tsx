@@ -67,14 +67,10 @@ const NAV = [
 ];
 
 const DISHES = [
-  { name: "Truffle Ribeye", desc: "Aged ribeye, black truffle, microgreens.", img: heroDish, badge: "Chef's Pick" },
-  { name: "Seared Scallops", desc: "Citrus beurre blanc, edible flowers.", img: dishScallops },
-  { name: "Rack of Lamb", desc: "Rosemary jus, root vegetables.", img: dishLamb, badge: "Signature" },
-  { name: "Seafood Linguine", desc: "Prawns, clams, white wine garlic.", img: dishPasta },
-  { name: "Lava Cake", desc: "Molten chocolate, vanilla bean ice cream.", img: dishDessert },
-  { name: "California Burger", desc: "Wagyu patty, aged cheddar, brioche.", img: dishBurger },
-  { name: "Smoked Negroni", desc: "Mezcal, Campari, applewood smoke.", img: dishCocktail },
-  { name: "Wagyu Tartare", desc: "Capers, quail yolk, sourdough crisp.", img: dishTartare, badge: "Chef's Pick" },
+  { name: "California Mixed Grill", desc: "Tenderloin, lamb chops, kebab & potatoes on sizzling iron.", img: mixedGrill, badge: "Signature" },
+  { name: "Lamb Chops", desc: "Char-grilled with rosemary, garlic & mushroom sauce.", img: mixedGrill, badge: "Chef's Pick" },
+  { name: "Beef Tenderloin", desc: "Aged tenderloin, peppercorn jus, roasted vegetables.", img: mixedGrill },
+  { name: "Sweet Selection", desc: "House-made mousses, puddings & seasonal fruit.", img: dessertsBuffet, badge: "Loved" },
 ];
 
 const MENU = {
