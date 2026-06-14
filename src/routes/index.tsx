@@ -538,11 +538,12 @@ function HomePage() {
       <footer className="bg-card border-t border-border pt-20 pb-32 md:pb-12">
         <div className="container-lux grid gap-10 md:grid-cols-4">
           <div className="md:col-span-2">
-            <a href="#home" className="flex items-center gap-2 font-display text-2xl font-bold">
-              <span className="grid h-10 w-10 place-items-center rounded-full bg-accent text-accent-foreground">
-                <Utensils className="h-4 w-4" />
+            <a href="#home" className="flex items-center gap-3 font-display text-2xl font-bold">
+              <img src={logo} alt="Restaurant California" className="h-12 w-12 object-contain" />
+              <span className="flex flex-col leading-none">
+                <span className="text-[10px] uppercase tracking-[0.3em] text-accent">Restaurant</span>
+                <span className="text-xl mt-0.5">California</span>
               </span>
-              Restaurant <span className="text-accent">California</span>
             </a>
             <p className="mt-6 max-w-md text-foreground/70 leading-relaxed">
               A taste worth remembering. Fine dining, signature dishes, and a warm atmosphere
