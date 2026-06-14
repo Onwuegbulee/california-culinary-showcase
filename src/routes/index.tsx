@@ -569,7 +569,7 @@ function HomePage() {
         </div>
         <div className="container-lux mt-12 pt-8 border-t border-border flex flex-col md:flex-row gap-4 justify-between text-xs text-muted-foreground">
           <p>© {new Date().getFullYear()} Restaurant California. All rights reserved.</p>
-          <p>Crafted with passion in Los Angeles.</p>
+          <p>Crafted with passion in Prishtina, Kosovo.</p>
         </div>
       </footer>
 
