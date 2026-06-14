@@ -496,7 +496,7 @@ function HomePage() {
             <div className="lg:col-span-3 rounded-sm overflow-hidden border border-border min-h-[420px]">
               <iframe
                 title="Restaurant California location"
-                src="https://www.google.com/maps?q=Los+Angeles,+CA&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11722.835886268138!2d21.0809087!3d42.7310502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13535f0723d2d34b%3A0xe3149ee5f0f649c3!2sRestaurant%20California!5e0!3m2!1sen!2sng!4v1781279438144!5m2!1sen!2sng"
                 className="w-full h-full min-h-[420px]"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
