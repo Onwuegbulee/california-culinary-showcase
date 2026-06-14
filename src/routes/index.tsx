@@ -5,19 +5,40 @@ import {
   Instagram, Facebook, ChevronRight, X, Utensils, Calendar, Users, Award,
 } from "lucide-react";
 
-import heroDish from "@/assets/hero-dish.jpg";
-import interior from "@/assets/interior.jpg";
-import chef from "@/assets/chef.jpg";
-import dishScallops from "@/assets/dish-scallops.jpg";
-import dishLamb from "@/assets/dish-lamb.jpg";
-import dishPasta from "@/assets/dish-pasta.jpg";
-import dishDessert from "@/assets/dish-dessert.jpg";
-import dishBurger from "@/assets/dish-burger.jpg";
-import dishCocktail from "@/assets/dish-cocktail.jpg";
-import dishTartare from "@/assets/dish-tartare.jpg";
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
-import gallery3 from "@/assets/gallery-3.jpg";
+import logoAsset from "@/assets/logo.png.asset.json";
+import exteriorNightA from "@/assets/photos/exterior-night.jpg.asset.json";
+import mixedGrillA from "@/assets/photos/mixed-grill.jpg.asset.json";
+import gardenTerraceA from "@/assets/photos/garden-terrace.jpg.asset.json";
+import dessertsBuffetA from "@/assets/photos/desserts-buffet.jpg.asset.json";
+import diningHall1A from "@/assets/photos/dining-hall-1.jpg.asset.json";
+import diningHall2A from "@/assets/photos/dining-hall-2.jpg.asset.json";
+import diningHall3A from "@/assets/photos/dining-hall-3.jpg.asset.json";
+import diningHall4A from "@/assets/photos/dining-hall-4.jpg.asset.json";
+
+const logo = logoAsset.url;
+const exteriorNight = exteriorNightA.url;
+const mixedGrill = mixedGrillA.url;
+const gardenTerrace = gardenTerraceA.url;
+const dessertsBuffet = dessertsBuffetA.url;
+const diningHall1 = diningHall1A.url;
+const diningHall2 = diningHall2A.url;
+const diningHall3 = diningHall3A.url;
+const diningHall4 = diningHall4A.url;
+
+// Aliases — map real photos onto the existing variable names used throughout the page
+const heroDish = mixedGrill;
+const interior = diningHall1;
+const chef = gardenTerrace;
+const dishScallops = mixedGrill;
+const dishLamb = mixedGrill;
+const dishPasta = mixedGrill;
+const dishDessert = dessertsBuffet;
+const dishBurger = mixedGrill;
+const dishCocktail = dessertsBuffet;
+const dishTartare = mixedGrill;
+const gallery1 = exteriorNight;
+const gallery2 = diningHall2;
+const gallery3 = diningHall4;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -46,14 +67,10 @@ const NAV = [
 ];
 
 const DISHES = [
-  { name: "Truffle Ribeye", desc: "Aged ribeye, black truffle, microgreens.", img: heroDish, badge: "Chef's Pick" },
-  { name: "Seared Scallops", desc: "Citrus beurre blanc, edible flowers.", img: dishScallops },
-  { name: "Rack of Lamb", desc: "Rosemary jus, root vegetables.", img: dishLamb, badge: "Signature" },
-  { name: "Seafood Linguine", desc: "Prawns, clams, white wine garlic.", img: dishPasta },
-  { name: "Lava Cake", desc: "Molten chocolate, vanilla bean ice cream.", img: dishDessert },
-  { name: "California Burger", desc: "Wagyu patty, aged cheddar, brioche.", img: dishBurger },
-  { name: "Smoked Negroni", desc: "Mezcal, Campari, applewood smoke.", img: dishCocktail },
-  { name: "Wagyu Tartare", desc: "Capers, quail yolk, sourdough crisp.", img: dishTartare, badge: "Chef's Pick" },
+  { name: "California Mixed Grill", desc: "Tenderloin, lamb chops, kebab & potatoes on sizzling iron.", img: mixedGrill, badge: "Signature" },
+  { name: "Lamb Chops", desc: "Char-grilled with rosemary, garlic & mushroom sauce.", img: mixedGrill, badge: "Chef's Pick" },
+  { name: "Beef Tenderloin", desc: "Aged tenderloin, peppercorn jus, roasted vegetables.", img: mixedGrill },
+  { name: "Sweet Selection", desc: "House-made mousses, puddings & seasonal fruit.", img: dessertsBuffet, badge: "Loved" },
 ];
 
 const MENU = {
@@ -130,12 +147,12 @@ function HomePage() {
         }`}
       >
         <div className="container-lux flex items-center justify-between gap-4">
-          <a href="#home" className="flex items-center gap-2 font-display text-xl font-bold tracking-tight">
-            <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-accent text-accent-foreground">
-              <Utensils className="h-4 w-4" />
+          <a href="#home" className="flex items-center gap-3 font-display text-xl font-bold tracking-tight">
+            <img src={logo} alt="Restaurant California" className="h-11 w-11 object-contain drop-shadow-[0_0_12px_rgba(212,175,55,0.35)]" />
+            <span className="hidden sm:flex flex-col leading-none">
+              <span className="text-[10px] uppercase tracking-[0.3em] text-accent">Restaurant</span>
+              <span className="text-lg mt-0.5">California</span>
             </span>
-            <span className="hidden sm:inline">Restaurant <span className="text-accent">California</span></span>
-            <span className="sm:hidden">RC</span>
           </a>
           <nav className="hidden lg:flex items-center gap-8 text-sm">
             {NAV.map((n) => (
@@ -230,8 +247,8 @@ function HomePage() {
               </div>
               <div>
                 <MapPin className="h-4 w-4 text-accent" />
-                <p className="mt-2 text-sm font-semibold">Los Angeles</p>
-                <p className="text-xs text-muted-foreground">Beverly Blvd</p>
+                <p className="mt-2 text-sm font-semibold">Prishtina</p>
+                <p className="text-xs text-muted-foreground">Kosovo</p>
               </div>
               <div>
                 <Clock className="h-4 w-4 text-accent" />
@@ -448,7 +465,7 @@ function HomePage() {
           <div className="grid lg:grid-cols-5 gap-8">
             <div className="lg:col-span-2 space-y-6">
               {[
-                { i: MapPin, t: "Address", s: "123 Beverly Blvd, Los Angeles, CA 90001" },
+                { i: MapPin, t: "Address", s: "Restaurant California, Prishtina, Kosovo" },
                 { i: Clock, t: "Opening Hours", s: "Mon – Sun · 12:00 PM – 11:00 PM" },
                 { i: Phone, t: "Phone", s: "(213) 555-7890" },
                 { i: Mail, t: "Email", s: "hello@restaurantcalifornia.com" },
@@ -479,7 +496,7 @@ function HomePage() {
             <div className="lg:col-span-3 rounded-sm overflow-hidden border border-border min-h-[420px]">
               <iframe
                 title="Restaurant California location"
-                src="https://www.google.com/maps?q=Los+Angeles,+CA&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11722.835886268138!2d21.0809087!3d42.7310502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13535f0723d2d34b%3A0xe3149ee5f0f649c3!2sRestaurant%20California!5e0!3m2!1sen!2sng!4v1781279438144!5m2!1sen!2sng"
                 className="w-full h-full min-h-[420px]"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -505,7 +522,7 @@ function HomePage() {
             </div>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            {[gallery1, dishScallops, dishCocktail, gallery2, dishLamb, gallery3, dishDessert, dishTartare].map((src, i) => (
+            {[exteriorNight, mixedGrill, diningHall1, gardenTerrace, dessertsBuffet, diningHall2, diningHall3, diningHall4].map((src, i) => (
               <a key={i} href="https://instagram.com" target="_blank" rel="noreferrer" className="relative aspect-square overflow-hidden rounded-sm group block">
                 <img src={src} alt="" loading="lazy" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-background/0 group-hover:bg-background/40 transition-colors grid place-items-center">
@@ -521,11 +538,12 @@ function HomePage() {
       <footer className="bg-card border-t border-border pt-20 pb-32 md:pb-12">
         <div className="container-lux grid gap-10 md:grid-cols-4">
           <div className="md:col-span-2">
-            <a href="#home" className="flex items-center gap-2 font-display text-2xl font-bold">
-              <span className="grid h-10 w-10 place-items-center rounded-full bg-accent text-accent-foreground">
-                <Utensils className="h-4 w-4" />
+            <a href="#home" className="flex items-center gap-3 font-display text-2xl font-bold">
+              <img src={logo} alt="Restaurant California" className="h-12 w-12 object-contain" />
+              <span className="flex flex-col leading-none">
+                <span className="text-[10px] uppercase tracking-[0.3em] text-accent">Restaurant</span>
+                <span className="text-xl mt-0.5">California</span>
               </span>
-              Restaurant <span className="text-accent">California</span>
             </a>
             <p className="mt-6 max-w-md text-foreground/70 leading-relaxed">
               A taste worth remembering. Fine dining, signature dishes, and a warm atmosphere
@@ -543,7 +561,7 @@ function HomePage() {
           <div>
             <p className="eyebrow">Contact</p>
             <ul className="mt-5 space-y-3 text-sm text-foreground/75">
-              <li>123 Beverly Blvd<br />Los Angeles, CA 90001</li>
+              <li>Restaurant California<br />Prishtina, Kosovo</li>
               <li>(213) 555-7890</li>
               <li>hello@restaurantcalifornia.com</li>
             </ul>
@@ -551,7 +569,7 @@ function HomePage() {
         </div>
         <div className="container-lux mt-12 pt-8 border-t border-border flex flex-col md:flex-row gap-4 justify-between text-xs text-muted-foreground">
           <p>© {new Date().getFullYear()} Restaurant California. All rights reserved.</p>
-          <p>Crafted with passion in Los Angeles.</p>
+          <p>Crafted with passion in Prishtina, Kosovo.</p>
         </div>
       </footer>
 
