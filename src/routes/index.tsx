@@ -5,19 +5,40 @@ import {
   Instagram, Facebook, ChevronRight, X, Utensils, Calendar, Users, Award,
 } from "lucide-react";
 
-import heroDish from "@/assets/hero-dish.jpg";
-import interior from "@/assets/interior.jpg";
-import chef from "@/assets/chef.jpg";
-import dishScallops from "@/assets/dish-scallops.jpg";
-import dishLamb from "@/assets/dish-lamb.jpg";
-import dishPasta from "@/assets/dish-pasta.jpg";
-import dishDessert from "@/assets/dish-dessert.jpg";
-import dishBurger from "@/assets/dish-burger.jpg";
-import dishCocktail from "@/assets/dish-cocktail.jpg";
-import dishTartare from "@/assets/dish-tartare.jpg";
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
-import gallery3 from "@/assets/gallery-3.jpg";
+import logoAsset from "@/assets/logo.png.asset.json";
+import exteriorNightA from "@/assets/photos/exterior-night.jpg.asset.json";
+import mixedGrillA from "@/assets/photos/mixed-grill.jpg.asset.json";
+import gardenTerraceA from "@/assets/photos/garden-terrace.jpg.asset.json";
+import dessertsBuffetA from "@/assets/photos/desserts-buffet.jpg.asset.json";
+import diningHall1A from "@/assets/photos/dining-hall-1.jpg.asset.json";
+import diningHall2A from "@/assets/photos/dining-hall-2.jpg.asset.json";
+import diningHall3A from "@/assets/photos/dining-hall-3.jpg.asset.json";
+import diningHall4A from "@/assets/photos/dining-hall-4.jpg.asset.json";
+
+const logo = logoAsset.url;
+const exteriorNight = exteriorNightA.url;
+const mixedGrill = mixedGrillA.url;
+const gardenTerrace = gardenTerraceA.url;
+const dessertsBuffet = dessertsBuffetA.url;
+const diningHall1 = diningHall1A.url;
+const diningHall2 = diningHall2A.url;
+const diningHall3 = diningHall3A.url;
+const diningHall4 = diningHall4A.url;
+
+// Aliases — map real photos onto the existing variable names used throughout the page
+const heroDish = mixedGrill;
+const interior = diningHall1;
+const chef = gardenTerrace;
+const dishScallops = mixedGrill;
+const dishLamb = mixedGrill;
+const dishPasta = mixedGrill;
+const dishDessert = dessertsBuffet;
+const dishBurger = mixedGrill;
+const dishCocktail = dessertsBuffet;
+const dishTartare = mixedGrill;
+const gallery1 = exteriorNight;
+const gallery2 = diningHall2;
+const gallery3 = diningHall4;
 
 export const Route = createFileRoute("/")({
   head: () => ({
