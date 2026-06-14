@@ -561,7 +561,7 @@ function HomePage() {
           <div>
             <p className="eyebrow">Contact</p>
             <ul className="mt-5 space-y-3 text-sm text-foreground/75">
-              <li>123 Beverly Blvd<br />Los Angeles, CA 90001</li>
+              <li>Restaurant California<br />Prishtina, Kosovo</li>
               <li>(213) 555-7890</li>
               <li>hello@restaurantcalifornia.com</li>
             </ul>
