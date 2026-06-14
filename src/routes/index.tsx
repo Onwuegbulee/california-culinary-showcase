@@ -247,8 +247,8 @@ function HomePage() {
               </div>
               <div>
                 <MapPin className="h-4 w-4 text-accent" />
-                <p className="mt-2 text-sm font-semibold">Los Angeles</p>
-                <p className="text-xs text-muted-foreground">Beverly Blvd</p>
+                <p className="mt-2 text-sm font-semibold">Prishtina</p>
+                <p className="text-xs text-muted-foreground">Kosovo</p>
               </div>
               <div>
                 <Clock className="h-4 w-4 text-accent" />
