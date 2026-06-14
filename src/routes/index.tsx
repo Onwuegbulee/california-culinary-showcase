@@ -147,12 +147,12 @@ function HomePage() {
         }`}
       >
         <div className="container-lux flex items-center justify-between gap-4">
-          <a href="#home" className="flex items-center gap-2 font-display text-xl font-bold tracking-tight">
-            <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-accent text-accent-foreground">
-              <Utensils className="h-4 w-4" />
+          <a href="#home" className="flex items-center gap-3 font-display text-xl font-bold tracking-tight">
+            <img src={logo} alt="Restaurant California" className="h-11 w-11 object-contain drop-shadow-[0_0_12px_rgba(212,175,55,0.35)]" />
+            <span className="hidden sm:flex flex-col leading-none">
+              <span className="text-[10px] uppercase tracking-[0.3em] text-accent">Restaurant</span>
+              <span className="text-lg mt-0.5">California</span>
             </span>
-            <span className="hidden sm:inline">Restaurant <span className="text-accent">California</span></span>
-            <span className="sm:hidden">RC</span>
           </a>
           <nav className="hidden lg:flex items-center gap-8 text-sm">
             {NAV.map((n) => (
