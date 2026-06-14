@@ -465,7 +465,7 @@ function HomePage() {
           <div className="grid lg:grid-cols-5 gap-8">
             <div className="lg:col-span-2 space-y-6">
               {[
-                { i: MapPin, t: "Address", s: "123 Beverly Blvd, Los Angeles, CA 90001" },
+                { i: MapPin, t: "Address", s: "Restaurant California, Prishtina, Kosovo" },
                 { i: Clock, t: "Opening Hours", s: "Mon – Sun · 12:00 PM – 11:00 PM" },
                 { i: Phone, t: "Phone", s: "(213) 555-7890" },
                 { i: Mail, t: "Email", s: "hello@restaurantcalifornia.com" },
