@@ -320,7 +320,7 @@ function HomePage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {DISHES.map((d) => (
-              <article key={d.name} className="group relative overflow-hidden rounded-sm bg-card border border-border">
+              <article key={d.name} className="group relative overflow-hidden glass-card glass-card-hover">
                 <div className="aspect-[4/5] overflow-hidden">
                   <img src={d.img} alt={d.name} loading="lazy" width={800} height={1000}
                     className="h-full w-full object-cover transition-transform duration-[1200ms] group-hover:scale-110" />
@@ -364,7 +364,7 @@ function HomePage() {
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {REVIEWS.map((r) => (
-              <div key={r.name} className="bg-card border border-border p-7 rounded-sm flex flex-col">
+              <div key={r.name} className="glass-card glass-card-hover p-7 flex flex-col">
                 <div className="flex text-accent mb-4">
                   {Array.from({ length: r.rating }).map((_, i) => <Star key={i} className="h-3.5 w-3.5 fill-current" />)}
                 </div>
@@ -402,7 +402,7 @@ function HomePage() {
           </div>
           <form
             onSubmit={(e) => { e.preventDefault(); alert("Thank you! We'll confirm your reservation shortly."); }}
-            className="max-w-3xl mx-auto bg-card/90 backdrop-blur-xl border border-border p-6 md:p-10 rounded-sm grid gap-5 md:grid-cols-2 shadow-[var(--shadow-lux)]"
+            className="max-w-3xl mx-auto glass-card p-6 md:p-10 grid gap-5 md:grid-cols-2"
           >
             <Field label="Full Name" name="name" required />
             <Field label="Phone" name="phone" type="tel" required />
@@ -436,7 +436,7 @@ function HomePage() {
                 { i: Utensils, t: "Seasonal Menu", s: "Farm to table" },
                 { i: Star, t: "Top Rated", s: "4.9 / 5 stars" },
               ].map((f) => (
-                <div key={f.t} className="flex gap-4 p-5 bg-muted rounded-sm border border-border">
+                <div key={f.t} className="flex gap-4 p-5 glass-card glass-card-hover">
                   <f.i className="h-6 w-6 text-accent shrink-0 mt-1" />
                   <div>
                     <p className="font-semibold">{f.t}</p>
@@ -470,7 +470,7 @@ function HomePage() {
                 { i: Phone, t: "Phone", s: "(213) 555-7890" },
                 { i: Mail, t: "Email", s: "hello@restaurantcalifornia.com" },
               ].map((c) => (
-                <div key={c.t} className="flex gap-4 p-6 bg-card border border-border rounded-sm">
+                <div key={c.t} className="flex gap-4 p-6 glass-card glass-card-hover">
                   <c.i className="h-5 w-5 text-accent shrink-0 mt-1" />
                   <div>
                     <p className="eyebrow !text-muted-foreground !text-[10px]">{c.t}</p>
@@ -479,21 +479,22 @@ function HomePage() {
                 </div>
               ))}
               <div className="grid grid-cols-3 gap-3">
-                <a href="tel:+12135557890" className="flex flex-col items-center gap-2 p-4 bg-card border border-border rounded-sm hover:border-accent transition">
+                <a href="tel:+12135557890" className="flex flex-col items-center gap-2 p-4 glass-card glass-card-hover">
                   <Phone className="h-5 w-5 text-accent" />
                   <span className="text-xs">Call</span>
                 </a>
-                <a href="https://maps.app.goo.gl/X6M8CTTbLCDctp677" target="_blank" rel="noreferrer" className="flex flex-col items-center gap-2 p-4 bg-card border border-border rounded-sm hover:border-accent transition">
+                <a href="https://maps.app.goo.gl/X6M8CTTbLCDctp677" target="_blank" rel="noreferrer" className="flex flex-col items-center gap-2 p-4 glass-card glass-card-hover">
                   <MapPin className="h-5 w-5 text-accent" />
                   <span className="text-xs">Directions</span>
                 </a>
-                <a href="https://wa.me/12135557890" target="_blank" rel="noreferrer" className="flex flex-col items-center gap-2 p-4 bg-card border border-border rounded-sm hover:border-accent transition">
+                <a href="https://wa.me/12135557890" target="_blank" rel="noreferrer" className="flex flex-col items-center gap-2 p-4 glass-card glass-card-hover">
                   <MessageCircle className="h-5 w-5 text-accent" />
                   <span className="text-xs">WhatsApp</span>
                 </a>
+
               </div>
             </div>
-            <div className="lg:col-span-3 rounded-sm overflow-hidden border border-border min-h-[420px]">
+            <div className="lg:col-span-3 rounded-3xl overflow-hidden glass-card min-h-[420px]">
               <iframe
                 title="Restaurant California location"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11722.835886268138!2d21.0809087!3d42.7310502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13535f0723d2d34b%3A0xe3149ee5f0f649c3!2sRestaurant%20California!5e0!3m2!1sen!2sng!4v1781279438144!5m2!1sen!2sng"
@@ -601,7 +602,7 @@ function Field({ label, name, type = "text", ...rest }: {
         name={name}
         type={type}
         {...rest}
-        className="w-full bg-background border border-border focus:border-accent outline-none px-4 py-3 rounded-sm text-sm transition-colors"
+        className="w-full bg-background/40 backdrop-blur-md border border-border focus:border-accent outline-none px-4 py-3 rounded-xl text-sm transition-colors"
       />
     </label>
   );
@@ -689,7 +690,7 @@ function MenuSection() {
         </div>
         <div className="grid gap-6 md:grid-cols-2 max-w-5xl mx-auto">
           {MENU[active].map((item: any) => (
-            <div key={item.name} className="flex gap-5 p-5 bg-card border border-border rounded-sm hover:border-accent transition group">
+            <div key={item.name} className="flex gap-5 p-5 glass-card glass-card-hover group">
               {item.img ? (
                 <img src={item.img} alt={item.name} loading="lazy"
                   className="h-24 w-24 shrink-0 object-cover rounded-sm" />
